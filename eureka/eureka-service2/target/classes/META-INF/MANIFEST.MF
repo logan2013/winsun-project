@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: eureka-service Maven Webapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 22090
+Implementation-Vendor-Id: com.practice.cloud
+Build-Jdk: 1.8.0_73
+Implementation-URL: http://www.example.com
+Created-By: Maven Integration for Eclipse
+

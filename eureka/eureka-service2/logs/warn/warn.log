@@ -1,0 +1,576 @@
+2018-11-12_16:39:17 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-12_16:39:21 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-12_16:39:22 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_09:17:13 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_09:17:15 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_09:17:17 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_09:21:55 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_09:21:57 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_09:21:58 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_09:31:58 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_09:41:58 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_09:51:58 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_10:01:58 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_11:02:57 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_11:02:59 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_11:03:00 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_14:10:41 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_14:10:43 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_14:10:44 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_14:20:44 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_14:30:44 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_14:40:44 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_14:50:44 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_15:14:13 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_15:14:15 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_15:14:16 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_15:24:16 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_15:34:16 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_15:44:16 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_15:45:43 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: WINSUN-FEGIN-SERVICE - niubideren:winsun-fegin-service:8766
+2018-11-13_15:45:43 WARN [InstanceResource.java:116] - Not Found (Renew): WINSUN-FEGIN-SERVICE - niubideren:winsun-fegin-service:8766
+2018-11-13_15:54:16 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_15:58:33 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_15:58:35 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_15:58:36 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-13_16:32:41 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_16:32:43 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-13_16:32:44 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_09:50:02 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_09:50:04 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_09:50:05 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_10:00:05 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_14:31:02 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_14:31:06 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_14:31:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_14:41:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_14:51:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_15:01:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_15:11:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_15:21:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_15:31:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_15:41:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_15:51:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_16:01:07 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_16:02:36 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_16:02:38 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_16:02:39 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_16:12:39 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_16:13:40 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: USER-SERVICE - niubideren:user-service:8762
+2018-11-14_16:13:40 WARN [InstanceResource.java:116] - Not Found (Renew): USER-SERVICE - niubideren:user-service:8762
+2018-11-14_16:18:40 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: USER-SERVICE - niubideren:user-service:8762
+2018-11-14_16:18:40 WARN [InstanceResource.java:116] - Not Found (Renew): USER-SERVICE - niubideren:user-service:8762
+2018-11-14_16:22:39 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_16:42:50 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_16:42:52 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_16:42:53 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_16:54:53 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_16:54:55 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_16:54:56 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_17:25:36 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_17:25:38 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_17:25:39 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_17:35:43 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_17:35:45 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_17:35:46 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_17:35:56 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_17:35:58 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-14_17:35:59 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-14_17:35:59 WARN [DirectJDKLog.java:180] - The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2018-11-15_09:14:23 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_09:14:28 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_09:14:29 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_09:24:29 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_09:28:33 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_09:28:37 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_09:28:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_09:38:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_09:48:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_09:58:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_10:08:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_10:18:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_10:28:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_10:38:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_10:48:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_10:58:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_11:08:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_11:18:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_11:28:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_11:38:38 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_11:44:01 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_11:44:03 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_11:44:04 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_11:50:25 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_11:50:27 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_11:50:28 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_16:40:16 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_16:40:18 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_16:40:19 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-15_18:08:48 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_18:08:50 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-15_18:08:51 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-16_09:41:27 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_09:41:31 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_09:41:32 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-16_11:13:30 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_11:13:32 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_11:13:33 WARN [PeerEurekaNodes.java:156] - The replica size seems to be empty. Check the route 53 DNS Registry
+2018-11-16_11:14:27 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_11:14:29 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_11:17:12 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_11:17:14 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_11:20:23 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-16_11:20:23 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@192.168.1.105 failed with response code 404
+2018-11-16_11:20:23 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@192.168.1.105: missing entry.
+2018-11-16_11:21:27 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/169.254.7.73:8762
+2018-11-16_11:21:27 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/169.254.7.73:8762:Cancel@192.168.1.105 failed with response code 404
+2018-11-16_11:21:27 WARN [PeerEurekaNode.java:171] - USER-SERVICE/169.254.7.73:8762:Cancel@192.168.1.105: missing entry.
+2018-11-16_11:22:35 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/169.254.7.73:8762
+2018-11-16_11:22:35 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/169.254.7.73:8762:Cancel@192.168.1.105 failed with response code 404
+2018-11-16_11:22:35 WARN [PeerEurekaNode.java:171] - USER-SERVICE/169.254.7.73:8762:Cancel@192.168.1.105: missing entry.
+2018-11-16_17:24:58 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-16_17:25:01 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_13:00:09 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_13:00:14 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_13:01:02 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_13:01:06 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_13:44:09 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_13:44:09 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_13:44:09 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_15:47:38 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_15:47:38 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_15:47:38 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_15:54:23 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_15:54:23 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_15:54:23 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:01:01 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:01:01 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:01:01 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:04:06 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:04:06 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:04:06 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:07:37 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:07:37 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:07:37 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:10:04 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_16:10:10 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_16:15:15 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:15:15 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:15:15 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:17:47 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:17:47 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:17:47 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:19:20 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:19:20 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:19:20 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:28:17 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:28:17 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:28:17 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:34:14 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:34:14 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:34:14 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:36:26 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:36:26 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:36:26 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:39:56 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:39:56 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:39:56 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_16:46:23 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_16:46:23 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_16:46:23 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_17:03:50 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_17:03:50 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_17:03:50 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_17:20:54 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost
+2018-11-18_17:20:54 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:Cancel@localhost failed with response code 404
+2018-11-18_17:20:54 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:Cancel@localhost: missing entry.
+2018-11-18_18:18:41 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-18_18:18:47 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_11:32:23 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_11:32:27 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_14:45:19 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_14:45:23 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_14:54:54 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost:60070
+2018-11-19_14:54:54 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Cancel@localhost failed with response code 404
+2018-11-19_14:54:54 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:60070:Cancel@localhost: missing entry.
+2018-11-19_15:05:26 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost:60070
+2018-11-19_15:05:26 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Cancel@localhost failed with response code 404
+2018-11-19_15:05:26 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:60070:Cancel@localhost: missing entry.
+2018-11-19_15:21:47 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_15:21:51 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_15:25:17 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/169.254.7.73:8762
+2018-11-19_15:25:17 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/169.254.7.73:8762:Cancel@localhost failed with response code 404
+2018-11-19_15:25:17 WARN [PeerEurekaNode.java:171] - USER-SERVICE/169.254.7.73:8762:Cancel@localhost: missing entry.
+2018-11-19_15:33:04 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/169.254.7.73:8762
+2018-11-19_15:33:04 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/169.254.7.73:8762:Cancel@localhost failed with response code 404
+2018-11-19_15:33:04 WARN [PeerEurekaNode.java:171] - USER-SERVICE/169.254.7.73:8762:Cancel@localhost: missing entry.
+2018-11-19_15:49:33 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/169.254.7.73:8762
+2018-11-19_15:49:33 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/169.254.7.73:8762:Cancel@localhost failed with response code 404
+2018-11-19_15:49:33 WARN [PeerEurekaNode.java:171] - USER-SERVICE/169.254.7.73:8762:Cancel@localhost: missing entry.
+2018-11-19_15:49:41 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost:60070
+2018-11-19_15:49:41 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Cancel@localhost failed with response code 404
+2018-11-19_15:49:41 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:60070:Cancel@localhost: missing entry.
+2018-11-19_16:42:42 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_16:42:47 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-19_16:45:16 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: UNKNOWN - localhost:60070
+2018-11-19_16:45:16 WARN [InstanceResource.java:116] - Not Found (Renew): UNKNOWN - localhost:60070
+2018-11-19_16:45:16 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Heartbeat@localhost failed with response code 404
+2018-11-19_16:45:16 WARN [PeerEurekaNode.java:212] - UNKNOWN/localhost:60070:Heartbeat@localhost: missing entry.
+2018-11-19_16:45:16 WARN [PeerEurekaNode.java:214] - UNKNOWN/localhost:60070:Heartbeat@localhost: cannot find instance id localhost:60070 and hence replicating the instance with status UP
+2018-11-20_10:03:32 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_10:03:36 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_10:16:40 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost:60070
+2018-11-20_10:16:40 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Cancel@localhost failed with response code 404
+2018-11-20_10:16:40 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:60070:Cancel@localhost: missing entry.
+2018-11-20_10:18:02 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost:60070
+2018-11-20_10:18:02 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Cancel@localhost failed with response code 404
+2018-11-20_10:18:02 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:60070:Cancel@localhost: missing entry.
+2018-11-20_10:22:04 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost:60070
+2018-11-20_10:22:04 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Cancel@localhost failed with response code 404
+2018-11-20_10:22:04 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:60070:Cancel@localhost: missing entry.
+2018-11-20_10:25:16 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/localhost:60070
+2018-11-20_10:25:16 WARN [ReplicationTask.java:35] - The replication of task UNKNOWN/localhost:60070:Cancel@localhost failed with response code 404
+2018-11-20_10:25:16 WARN [PeerEurekaNode.java:171] - UNKNOWN/localhost:60070:Cancel@localhost: missing entry.
+2018-11-20_11:10:23 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_11:10:27 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_11:15:49 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/169.254.7.73:8762
+2018-11-20_11:15:49 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/169.254.7.73:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:15:49 WARN [PeerEurekaNode.java:171] - USER-SERVICE/169.254.7.73:8762:Cancel@localhost: missing entry.
+2018-11-20_11:18:20 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_11:18:24 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_11:21:21 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:21:21 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:21:21 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:35:22 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:35:22 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:35:22 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:37:40 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:37:40 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:37:40 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:43:22 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: USER-SERVICE - localhost:user-service:8762
+2018-11-20_11:43:22 WARN [InstanceResource.java:116] - Not Found (Renew): USER-SERVICE - localhost:user-service:8762
+2018-11-20_11:43:22 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:43:22 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Heartbeat@localhost failed with response code 404
+2018-11-20_11:43:22 WARN [PeerEurekaNode.java:212] - USER-SERVICE/localhost:user-service:8762:Heartbeat@localhost: missing entry.
+2018-11-20_11:43:22 WARN [PeerEurekaNode.java:214] - USER-SERVICE/localhost:user-service:8762:Heartbeat@localhost: cannot find instance id localhost:user-service:8762 and hence replicating the instance with status DOWN
+2018-11-20_11:43:22 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:43:22 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:44:04 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:44:04 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:44:04 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:47:08 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:47:08 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:47:08 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:53:26 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:53:26 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:53:26 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:54:19 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:54:19 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:54:19 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_11:55:47 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_11:55:47 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_11:55:47 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_12:05:52 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_12:05:52 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_12:05:52 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_12:11:25 WARN [AbstractInstanceRegistry.java:626] - DS: Registry: expired lease for USER-SERVICE/localhost:user-service:8762
+2018-11-20_13:05:43 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_13:05:45 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_13:12:53 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_13:12:53 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_13:12:53 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_13:15:18 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_13:15:20 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_13:19:55 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_13:19:55 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_13:19:55 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_13:25:54 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_13:25:54 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_13:25:54 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_13:28:07 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_13:28:07 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_13:28:07 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:01:55 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:01:55 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:01:55 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:04:59 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:04:59 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:04:59 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:07:46 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:07:46 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:07:46 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:29:48 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:29:48 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:29:48 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:37:15 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:37:15 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:37:15 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:42:22 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:42:22 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:42:22 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:43:30 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:43:30 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:43:30 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:48:19 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:48:19 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:48:19 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:51:34 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:51:34 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:51:34 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:52:01 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:52:01 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:52:01 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:56:33 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:56:33 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:56:33 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_14:59:33 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_14:59:33 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_14:59:33 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:01:06 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_15:01:06 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_15:01:06 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:05:02 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_15:05:02 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_15:05:02 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:07:46 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_15:07:46 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_15:07:46 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:11:57 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_15:11:57 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_15:11:57 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:17:47 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_15:17:47 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_15:17:47 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:21:04 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_15:21:04 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_15:21:04 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:21:07 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-20_15:21:07 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-20_15:21:07 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.
+2018-11-20_15:31:26 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_15:31:28 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_15:39:37 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_15:39:37 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_15:39:37 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_15:39:44 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-20_15:39:44 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-20_15:39:44 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.
+2018-11-20_16:20:07 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_16:20:09 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_16:22:17 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:22:17 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:22:17 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:27:44 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:27:44 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:27:44 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:29:37 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:29:37 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:29:37 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:35:00 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:35:00 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:35:00 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:39:53 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:39:53 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:39:53 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:42:55 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:42:55 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:42:55 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:50:44 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:50:44 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:50:44 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:52:03 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:52:03 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:52:03 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:53:25 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:53:25 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:53:25 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_16:55:52 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_16:55:52 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_16:55:52 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:01:08 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_17:01:08 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_17:01:08 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:24:13 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_17:24:13 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_17:24:13 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:26:41 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_17:26:41 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_17:26:41 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:33:18 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_17:33:18 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_17:33:18 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:38:58 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_17:38:58 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_17:38:58 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:42:56 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_17:42:58 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_17:46:39 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_17:46:39 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_17:46:39 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:54:22 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-20_17:54:22 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-20_17:54:22 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.
+2018-11-20_17:54:24 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/niubideren:user-service:8762
+2018-11-20_17:54:24 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/niubideren:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_17:54:24 WARN [PeerEurekaNode.java:171] - USER-SERVICE/niubideren:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_17:55:57 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-20_17:55:57 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-20_17:55:57 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.
+2018-11-20_17:57:57 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_17:57:59 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_20:09:03 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_20:09:11 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-20_20:14:09 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_20:14:09 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_20:14:09 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-20_20:19:00 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-20_20:19:00 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-20_20:19:00 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-21_09:31:12 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-21_09:31:16 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-21_09:33:19 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: USER-SERVICE/localhost:user-service:8762
+2018-11-21_09:33:19 WARN [ReplicationTask.java:35] - The replication of task USER-SERVICE/localhost:user-service:8762:Cancel@localhost failed with response code 404
+2018-11-21_09:33:19 WARN [PeerEurekaNode.java:171] - USER-SERVICE/localhost:user-service:8762:Cancel@localhost: missing entry.
+2018-11-22_16:17:36 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-22_16:17:39 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-22_16:20:33 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-22_16:20:35 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_09:18:40 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_09:18:44 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_10:04:41 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_10:04:46 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_10:05:37 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: WINSUN-CONFIG-SERVER - localhost:winsun-config-server:7010
+2018-11-23_10:05:37 WARN [InstanceResource.java:116] - Not Found (Renew): WINSUN-CONFIG-SERVER - localhost:winsun-config-server:7010
+2018-11-23_10:14:40 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: WINSUN-FEGIN-SERVICE - localhost:winsun-fegin-service:8766
+2018-11-23_10:14:40 WARN [InstanceResource.java:116] - Not Found (Renew): WINSUN-FEGIN-SERVICE - localhost:winsun-fegin-service:8766
+2018-11-23_10:14:40 WARN [ReplicationTask.java:35] - The replication of task WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost failed with response code 404
+2018-11-23_10:14:40 WARN [PeerEurekaNode.java:212] - WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost: missing entry.
+2018-11-23_10:14:40 WARN [PeerEurekaNode.java:214] - WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost: cannot find instance id localhost:winsun-fegin-service:8766 and hence replicating the instance with status UP
+2018-11-23_10:26:04 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_10:26:08 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_10:40:32 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: WINSUN-FEGIN-SERVICE - localhost:winsun-fegin-service:8766
+2018-11-23_10:40:32 WARN [InstanceResource.java:116] - Not Found (Renew): WINSUN-FEGIN-SERVICE - localhost:winsun-fegin-service:8766
+2018-11-23_10:40:32 WARN [ReplicationTask.java:35] - The replication of task WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost failed with response code 404
+2018-11-23_10:40:32 WARN [PeerEurekaNode.java:212] - WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost: missing entry.
+2018-11-23_10:40:32 WARN [PeerEurekaNode.java:214] - WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost: cannot find instance id localhost:winsun-fegin-service:8766 and hence replicating the instance with status UP
+2018-11-23_10:51:21 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-SERVICE/localhost:winsun-service:8080
+2018-11-23_10:51:21 WARN [ReplicationTask.java:35] - The replication of task WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost failed with response code 404
+2018-11-23_10:51:21 WARN [PeerEurekaNode.java:171] - WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost: missing entry.
+2018-11-23_11:40:09 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999
+2018-11-23_11:40:09 WARN [ReplicationTask.java:35] - The replication of task WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999:Cancel@localhost failed with response code 404
+2018-11-23_11:40:09 WARN [PeerEurekaNode.java:171] - WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999:Cancel@localhost: missing entry.
+2018-11-23_12:14:44 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766
+2018-11-23_12:14:44 WARN [ReplicationTask.java:35] - The replication of task WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Cancel@localhost failed with response code 404
+2018-11-23_12:14:44 WARN [PeerEurekaNode.java:171] - WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Cancel@localhost: missing entry.
+2018-11-23_14:55:44 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_14:55:49 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_16:07:52 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_16:07:56 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_17:43:28 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_17:43:32 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_18:33:19 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_18:33:23 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_19:24:55 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_19:24:59 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_19:34:17 WARN [AbstractInstanceRegistry.java:356] - DS: Registry: lease doesn't exist, registering resource: WINSUN-FEGIN-SERVICE - localhost:winsun-fegin-service:8766
+2018-11-23_19:34:17 WARN [InstanceResource.java:116] - Not Found (Renew): WINSUN-FEGIN-SERVICE - localhost:winsun-fegin-service:8766
+2018-11-23_19:34:17 WARN [ReplicationTask.java:35] - The replication of task WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost failed with response code 404
+2018-11-23_19:34:17 WARN [PeerEurekaNode.java:212] - WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost: missing entry.
+2018-11-23_19:34:17 WARN [PeerEurekaNode.java:214] - WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766:Heartbeat@localhost: cannot find instance id localhost:winsun-fegin-service:8766 and hence replicating the instance with status UP
+2018-11-23_19:36:00 WARN [AbstractInstanceRegistry.java:626] - DS: Registry: expired lease for WINSUN-FEGIN-SERVICE/localhost:winsun-fegin-service:8766
+2018-11-23_20:05:59 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-SERVICE/localhost:winsun-service:8080
+2018-11-23_20:05:59 WARN [ReplicationTask.java:35] - The replication of task WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost failed with response code 404
+2018-11-23_20:05:59 WARN [PeerEurekaNode.java:171] - WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost: missing entry.
+2018-11-23_20:17:18 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999
+2018-11-23_20:17:18 WARN [ReplicationTask.java:35] - The replication of task WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999:Cancel@localhost failed with response code 404
+2018-11-23_20:17:18 WARN [PeerEurekaNode.java:171] - WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999:Cancel@localhost: missing entry.
+2018-11-23_20:46:53 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_20:46:57 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_21:10:33 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_21:10:37 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-23_21:28:29 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-SERVICE/localhost:winsun-service:8080
+2018-11-23_21:28:29 WARN [ReplicationTask.java:35] - The replication of task WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost failed with response code 404
+2018-11-23_21:28:29 WARN [PeerEurekaNode.java:171] - WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost: missing entry.
+2018-11-23_21:36:10 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-SERVICE/localhost:winsun-service:8080
+2018-11-23_21:36:10 WARN [ReplicationTask.java:35] - The replication of task WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost failed with response code 404
+2018-11-23_21:36:10 WARN [PeerEurekaNode.java:171] - WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost: missing entry.
+2018-11-23_21:43:55 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-SERVICE/localhost:winsun-service:8080
+2018-11-23_21:43:55 WARN [ReplicationTask.java:35] - The replication of task WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost failed with response code 404
+2018-11-23_21:43:55 WARN [PeerEurekaNode.java:171] - WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost: missing entry.
+2018-11-24_00:50:51 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:51:02 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:53:02 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:53:10 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:55:31 WARN [DefaultHandlerExceptionResolver.java:424] - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.cloud.app.controller.EurekaApiController.test(java.lang.Object)
+2018-11-24_00:57:24 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:57:29 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:58:07 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:58:11 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:58:51 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_00:58:56 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_17:47:11 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_17:47:22 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_17:51:57 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_17:52:05 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_17:56:13 WARN [DefaultHandlerExceptionResolver.java:424] - Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.cloud.app.controller.EurekaApiController.test2(java.lang.Object)
+2018-11-24_17:57:13 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_17:57:20 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:02:31 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:02:38 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:05:21 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:05:26 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:08:07 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:08:14 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:10:59 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:11:05 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:12:23 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:12:30 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:17:39 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:17:47 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:22:32 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:22:39 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:24:10 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:24:18 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:25:31 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:25:39 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:27:06 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:27:14 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:30:12 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-24_18:30:17 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-25_10:42:37 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-25_10:42:42 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-25_11:49:27 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999
+2018-11-25_11:49:27 WARN [ReplicationTask.java:35] - The replication of task WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999:Cancel@localhost failed with response code 404
+2018-11-25_11:49:27 WARN [PeerEurekaNode.java:171] - WINSUN-ZUUL-SERVICE/localhost:winsun-zuul-service:9999:Cancel@localhost: missing entry.
+2018-11-25_12:29:17 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-25_12:29:21 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-25_12:48:04 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-SERVICE/localhost:winsun-service:8080
+2018-11-25_12:48:04 WARN [ReplicationTask.java:35] - The replication of task WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost failed with response code 404
+2018-11-25_12:48:04 WARN [PeerEurekaNode.java:171] - WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost: missing entry.
+2018-11-25_13:17:17 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-SERVICE/localhost:winsun-service:8080
+2018-11-25_13:17:17 WARN [ReplicationTask.java:35] - The replication of task WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost failed with response code 404
+2018-11-25_13:17:17 WARN [PeerEurekaNode.java:171] - WINSUN-SERVICE/localhost:winsun-service:8080:Cancel@localhost: missing entry.
+2018-11-26_15:33:16 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-26_15:33:19 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-26_15:35:40 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-26_15:35:40 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-26_15:35:40 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.
+2018-11-26_15:35:56 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-26_15:35:58 WARN [URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2018-11-26_15:41:45 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-26_15:41:45 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-26_15:41:45 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.
+2018-11-26_15:57:52 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-26_15:57:52 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-26_15:57:52 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.
+2018-11-26_15:58:56 WARN [AbstractInstanceRegistry.java:318] - DS: Registry: cancel failed because Lease is not registered for: WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070
+2018-11-26_15:58:56 WARN [ReplicationTask.java:35] - The replication of task WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost failed with response code 404
+2018-11-26_15:58:56 WARN [PeerEurekaNode.java:171] - WINSUN-OAUTH-SERVICE/niubideren:winsun-oauth-service:60070:Cancel@localhost: missing entry.

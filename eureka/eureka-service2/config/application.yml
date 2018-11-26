@@ -1,0 +1,14 @@
+server:
+  port: 8886
+spring:
+  application:
+    name: winsun-eureka-service
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

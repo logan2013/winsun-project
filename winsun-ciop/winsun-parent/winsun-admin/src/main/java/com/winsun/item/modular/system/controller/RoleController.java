@@ -1,0 +1,208 @@
+package com.winsun.item.modular.system.controller;
+
+import com.baomidou.mybatisplus.plugins.Page;
+import com.winsun.item.core.base.controller.BaseController;
+import com.winsun.item.core.base.tips.Tip;
+import com.winsun.item.core.cache.CacheKit;
+import com.winsun.item.core.common.annotion.BussinessLog;
+import com.winsun.item.core.common.annotion.Permission;
+import com.winsun.item.core.common.constant.Const;
+import com.winsun.item.core.common.constant.cache.Cache;
+import com.winsun.item.core.common.constant.dictmap.RoleDict;
+import com.winsun.item.core.common.constant.factory.ConstantFactory;
+import com.winsun.item.core.common.constant.factory.PageFactory;
+import com.winsun.item.core.common.exception.BizExceptionEnum;
+import com.winsun.item.core.exception.GunsException;
+import com.winsun.item.core.log.LogObjectHolder;
+import com.winsun.item.core.node.ZTreeNode;
+import com.winsun.item.core.util.Convert;
+import com.winsun.item.core.util.ToolUtil;
+import com.winsun.item.modular.system.model.Role;
+import com.winsun.item.modular.system.model.User;
+import com.winsun.item.modular.system.service.IRoleService;
+import com.winsun.item.modular.system.service.IUserService;
+import com.winsun.item.modular.system.warpper.RoleWarpper;
+import com.winsun.item.modular.system.warpper.UserWarpper;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 角色控制器
+ *
+ * @author fengshuonan
+ * @Date 2017年2月12日21:59:14
+ */
+@RestController
+@RequestMapping("/role")
+public class RoleController extends BaseController {
+
+    @Autowired
+    private IUserService userService;
+
+    @Autowired
+    private IRoleService roleService;
+
+    /**
+     * 获取角色列表
+     */
+    @Permission
+    @GetMapping("/list")
+    public Object list(@RequestParam(required = false) String roleName) {
+    	Page<Role> page = new PageFactory<Role>().defaultPage();
+        List<Map<String, Object>> roles = this.roleService.selectRoles(super.getPara("roleName"));
+        page.setRecords((List<Role>) new RoleWarpper(roles).warp());
+        return super.packForBT(page);
+    }
+
+    /**
+     * 角色详情信息接口
+     */
+    @GetMapping("/role_info/{roleId}")
+    public Object roleInfo(@PathVariable Integer roleId) {
+        if (ToolUtil.isEmpty(roleId)) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        Role role = this.roleService.selectById(roleId);
+        resultMap.put("role", role);
+        resultMap.put("pName", ConstantFactory.me().getSingleRoleName(role.getPid()));
+        resultMap.put("deptName", ConstantFactory.me().getDeptName(role.getDeptid()));
+        LogObjectHolder.me().set(role);
+        
+        return resultMap;
+    }
+    
+    /**
+     * 角色新增
+     */
+    @PostMapping("/add")
+    @BussinessLog(value = "添加角色", key = "name", dict = RoleDict.class)
+    @Permission(Const.ADMIN_NAME)
+    public Tip add(@Valid Role role, @RequestParam("ids") String ids, BindingResult result) {
+        if (result.hasErrors()) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        role.setId(null);
+        this.roleService.insert(role);
+        
+        if (ToolUtil.isNotEmpty(ids)) {
+        	this.roleService.setAuthority(role.getId(), ids);
+        }
+        
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 角色修改
+     */
+    @PostMapping("/edit")
+    @BussinessLog(value = "修改角色", key = "name", dict = RoleDict.class)
+    @Permission(Const.ADMIN_NAME)
+    public Tip edit(@Valid Role role, @RequestParam("ids") String ids, BindingResult result) {
+        if (result.hasErrors()) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        this.roleService.updateById(role);
+        
+        if (ToolUtil.isNotEmpty(ids)) {
+        	this.roleService.setAuthority(role.getId(), ids);
+        }
+        
+        //删除缓存
+        CacheKit.removeAll(Cache.CONSTANT);
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 删除角色
+     */
+    @PostMapping("/remove")
+    @BussinessLog(value = "删除角色", key = "roleId", dict = RoleDict.class)
+    @Permission(Const.ADMIN_NAME)
+    public Tip remove(@RequestParam Integer roleId) {
+        if (ToolUtil.isEmpty(roleId)) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+
+        //不能删除超级管理员角色
+        if (roleId.equals(Const.ADMIN_ROLE_ID)) {
+            throw new GunsException(BizExceptionEnum.CANT_DELETE_ADMIN);
+        }
+
+        //缓存被删除的角色名称
+        LogObjectHolder.me().set(ConstantFactory.me().getSingleRoleName(roleId));
+
+        this.roleService.delRoleById(roleId);
+
+        //删除缓存
+        CacheKit.removeAll(Cache.CONSTANT);
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 查看角色
+     */
+    @GetMapping("/view/{roleId}")
+    public Tip view(@PathVariable Integer roleId) {
+        if (ToolUtil.isEmpty(roleId)) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        this.roleService.selectById(roleId);
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 配置权限
+     */
+    @PostMapping("/setAuthority")
+    @BussinessLog(value = "配置权限", key = "roleId,ids", dict = RoleDict.class)
+    @Permission(Const.ADMIN_NAME)
+    public Tip setAuthority(@RequestParam("roleId") Integer roleId, @RequestParam("ids") String ids) {
+        if (ToolUtil.isOneEmpty(roleId)) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        this.roleService.setAuthority(roleId, ids);
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 获取角色列表
+     */
+    @GetMapping(value = "/roleTreeList")
+    public List<ZTreeNode> roleTreeList() {
+        List<ZTreeNode> roleTreeList = this.roleService.roleTreeList();
+        return roleTreeList;
+    }
+
+    /**
+     * 获取角色列表
+     */
+    @GetMapping("/roleTreeListByUserId/{userId}")
+    public List<ZTreeNode> roleTreeListByUserId(@PathVariable Integer userId) {
+        User theUser = this.userService.selectById(userId);
+        String roleid = theUser.getRoleid();
+        if (ToolUtil.isEmpty(roleid)) {
+            List<ZTreeNode> roleTreeList = this.roleService.roleTreeList();
+            return roleTreeList;
+        } else {
+            String[] strArray = Convert.toStrArray(",", roleid);
+            List<ZTreeNode> roleTreeListByUserId = this.roleService.roleTreeListByRoleId(strArray);
+            return roleTreeListByUserId;
+        }
+    }
+
+}

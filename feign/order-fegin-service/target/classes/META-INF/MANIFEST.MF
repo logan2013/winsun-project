@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: winsun-fegin-service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 22090
+Implementation-Vendor-Id: com.cloud
+Build-Jdk: 1.8.0_73
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/winsun-fegin-service
+Created-By: Maven Integration for Eclipse
+

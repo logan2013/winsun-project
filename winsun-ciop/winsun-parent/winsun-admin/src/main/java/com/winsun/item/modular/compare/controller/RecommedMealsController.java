@@ -1,0 +1,119 @@
+package com.winsun.item.modular.compare.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import com.winsun.item.core.util.excel.ExportExcel;
+import com.winsun.item.core.util.excel.ImportExcel;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.baomidou.mybatisplus.plugins.Page;
+import com.winsun.item.core.base.controller.BaseController;
+import com.winsun.item.core.common.constant.factory.PageFactory;
+import com.winsun.item.core.util.ResponseEntity;
+import com.winsun.item.modular.compare.model.DimActDisc;
+import com.winsun.item.modular.compare.service.IDimActDiscService;
+import com.winsun.item.modular.system.model.User;
+import com.winsun.item.modular.system.warpper.UserWarpper;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * 推荐套餐管理控制器
+ *
+ * @author zero
+ * @Date 2018年11月9日
+ */
+@RestController
+@RequestMapping("/compared/meal")
+public class RecommedMealsController extends BaseController {
+
+    @Autowired
+    private IDimActDiscService dimActDiscService;
+
+    @RequestMapping(value = "/list")//, method = RequestMethod.POST
+    public Object list(@RequestParam Map<String, Object> map) {
+        Page<Map<String, Object>> page = new PageFactory<Map<String, Object>>().defaultPage();
+        System.out.println(page);
+        List<Map<String, Object>> list = dimActDiscService.selectList(page, map);
+        page.setRecords(list);
+        return super.packForBT(page);
+    }
+
+    @RequestMapping(value = "add")
+    public Object add(DimActDisc dimActDisc) {
+//		System.err.println(dimActDisc);
+//		System.out.println(1);
+        boolean flag = dimActDiscService.insert(dimActDisc);
+        if (flag) {
+            return ResponseEntity
+                    .newJSON("code", 200);
+        } else {
+            return ResponseEntity
+                    .newJSON("code", 400, "message", "新增失败");
+        }
+    }
+
+    @RequestMapping(value = "detail/{id}")
+    public Object detail(@PathVariable Integer id) {
+        DimActDisc dimActDisc = dimActDiscService.selectById(id);
+        System.out.println(dimActDisc);
+        return ResponseEntity
+                .newJSON("code", 200, "data", dimActDisc);
+    }
+
+    @RequestMapping(value = "update")
+    public Object update(DimActDisc dimActDisc) {
+        boolean flag = dimActDiscService.updateById(dimActDisc);
+        if (flag) {
+            return ResponseEntity
+                    .newJSON("code", 200);
+        } else {
+            return ResponseEntity
+                    .newJSON("code", 400, "message", "修改失败");
+        }
+    }
+
+    @RequestMapping(value = "delete")
+    public Object delete(@RequestParam String id) {
+        dimActDiscService.deleteById(id);
+        return ResponseEntity
+                .newJSON("code", 200);
+    }
+
+    @RequestMapping(value = "exportExcel", method = RequestMethod.POST)
+    public org.springframework.http.ResponseEntity<byte[]> exportExcel(HttpServletRequest request, HttpServletResponse response) {
+    	org.springframework.http.ResponseEntity<byte[]> entity = null;
+        try {
+            XSSFWorkbook workbook = dimActDiscService.exportExcel(request, response);
+            entity = ExportExcel.toDownLoad(workbook, request, response, "excel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    @RequestMapping(value = "importExcel", method = RequestMethod.POST)
+    public Object importExcel(@RequestParam("file") MultipartFile multipartFile) {
+        try {
+            dimActDiscService.importExcel(multipartFile);
+            return ResponseEntity
+                    .newJSON("code", 200);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity
+                    .newJSON("code", 400);
+        }
+    }
+
+
+}

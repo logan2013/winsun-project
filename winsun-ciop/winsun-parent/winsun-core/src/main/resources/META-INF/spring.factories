@@ -1,0 +1,6 @@
+# AutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.winsun.item.core.base.controller.GlobalController,\
+com.winsun.item.core.config.DefaultFastjsonConfig,\
+com.winsun.item.core.config.DefaultProperties,\
+com.winsun.item.core.config.DefaultWebConfig

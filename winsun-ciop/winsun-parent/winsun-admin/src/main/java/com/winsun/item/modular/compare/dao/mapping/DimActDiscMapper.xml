@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.winsun.item.modular.compare.dao.DimActDiscMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.winsun.item.modular.compare.model.DimActDisc">
+        <id column="id" property="id" />
+        <result column="region_type" property="regionType" />
+        <result column="disc_name" property="discName" />
+        <result column="disc_value" property="discValue" />
+        <result column="speed_value" property="speedValue" />
+        <result column="speed_value_desc" property="speedValueDesc" />
+        <result column="mou_call" property="mouCall" />
+        <result column="stm_data_value" property="stmDataValue" />
+        <result column="stm_data" property="stmData" />
+        <result column="fk_value" property="fkValue" />
+        <result column="fk_desc" property="fkDesc" />
+        <result column="itv_value" property="itvValue" />
+        <result column="itv_desc" property="itvDesc" />
+        <result column="bt_value" property="btValue" />
+        <result column="bt_type" property="btType" />
+        <result column="cfq_value" property="cfqValue" />
+        <result column="cfq_desc" property="cfqDesc" />
+        <result column="yzf_hb_value" property="yzfHbValue" />
+        <result column="yzf_hb" property="yzfHb" />
+        <result column="is_old" property="isOld" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, region_type, disc_name, disc_value, speed_value, speed_value_desc, mou_call, stm_data_value, stm_data
+        , fk_value, fk_desc, itv_value, itv_desc, bt_value, bt_type, cfq_value, cfq_desc, yzf_hb_value, yzf_hb, is_old, del_flag
+    </sql>
+
+	<select id="selectList" resultMap="BaseResultMap" parameterType="java.util.Map">
+		SELECT <include refid="Base_Column_List"/>
+		FROM dim_act_disc
+		WHERE del_flag = 0
+		<if test="map.regionType != null and map.regionType != ''">
+			and region_type = #{map.regionType}
+		</if>
+		<if test="map.isOld != null and map.isOld != ''">
+			and is_old = 0
+		</if>
+		order by region_type,disc_value desc
+	</select>
+	
+	<select id="selectListByMap" resultType="java.util.Map" parameterType="java.util.Map">
+		SELECT <include refid="Base_Column_List"/>
+		FROM dim_act_disc
+		WHERE del_flag = 0
+		<if test="regionType != null and regionType != ''">
+			and region_type = #{regionType}
+		</if>
+		order by region_type,disc_value desc
+	</select>
+	
+	<update id="deleteById" parameterType="java.lang.String">
+		update dim_act_disc set del_flag = 1 where id = #{id}
+	</update>
+	
+</mapper>
