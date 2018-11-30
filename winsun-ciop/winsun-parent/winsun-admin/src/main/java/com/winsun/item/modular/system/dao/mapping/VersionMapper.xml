@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.winsun.item.modular.system.dao.VersionMapper">
+
+    <select id="selectNewVersion" resultType="version">
+		SELECT
+			*
+		FROM
+			app_version
+		WHERE softSystem = #{softSystem}
+			AND VERSION LIKE CONCAT('%',#{versionType})
+		ORDER BY updateTime DESC 
+		LIMIT 1
+    </select>
+
+</mapper>

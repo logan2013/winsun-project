@@ -22,7 +22,7 @@ public interface WinsunComparedFeginClient {
 	public Object test();
 	
 	@RequestMapping(value = "/ciop/compared/agree",method = RequestMethod.POST)
-	public Object agreeResult(@RequestParam("id")String id);
+	public Object agreeResult(@RequestParam("id")String id,@RequestParam("speed")String speed);
 	
 	@RequestMapping(value = "/ciop/compared/record/list",method = RequestMethod.POST)
 	public Object recordList(@RequestParam Map<String,Object> map);

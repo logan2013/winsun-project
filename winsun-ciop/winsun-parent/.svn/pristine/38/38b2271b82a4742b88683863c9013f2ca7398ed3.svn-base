@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.winsun.item.modular.compare.dao.ComparedMapper">
+
+	<select id="getGridCodeByAddr" parameterType="java.lang.String" resultType="java.lang.String">
+		select grid_code 
+		from dim_addr_grid
+		where addr = #{address}
+	</select>
+	
+	<select id="getGridLabelByCode" parameterType="java.lang.String" resultType="java.lang.String">
+		select label
+		from dim_grid_label
+		where grid_code = #{gridCode}
+	</select>
+	
+</mapper>

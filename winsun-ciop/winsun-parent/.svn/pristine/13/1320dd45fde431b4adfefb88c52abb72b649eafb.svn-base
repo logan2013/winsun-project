@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.winsun.item.modular.compare.dao.ComparedRecordMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sale_name,user_id,user_account,param,best_meal,recommend_meals,account,create_time
+    </sql>
+
+	<select id="selectPcList" resultType="java.util.Map" parameterType="java.util.Map">
+		SELECT <include refid="Base_Column_List"/>
+		FROM dim_compared_record
+		WHERE 1 = 1
+		<if test="map.saleName != null and map.saleName!= ''">
+			and sale_name LIKE concat('%',#{map.saleName},'%')
+		</if>
+		<if test="map.customerName != null and map.customerName!= ''">
+			and customer_name LIKE concat('%',#{map.customerName},'%')
+		</if>
+		<if test="map.customerAddress != null and map.customerAddress!= ''">
+			and customer_address LIKE concat('%',#{map.customerAddress},'%')
+		</if>
+		ORDER BY create_time DESC 
+	</select>
+
+	<select id="selectList" resultType="java.util.Map" parameterType="java.util.Map">
+		SELECT <include refid="Base_Column_List"/>
+		FROM dim_compared_record
+		WHERE 1 = 1
+		<if test="map.keyWord != null and map.keyWord!= ''">
+			and (
+				sale_name LIKE concat('%',#{map.keyWord},'%')
+				OR customer_name LIKE concat('%',#{map.keyWord},'%')
+				OR customer_address LIKE concat('%',#{map.keyWord},'%')
+			)
+		</if>
+		ORDER BY create_time DESC
+	</select>
+
+	<select id="selectListByMap" resultType="java.util.Map" parameterType="java.util.Map">
+		SELECT <include refid="Base_Column_List"/>
+		FROM dim_compared_record
+		WHERE 1 = 1
+		ORDER BY create_time DESC
+	</select>
+	
+	<insert id="addLog" parameterType="java.util.Map">
+		insert into dim_compared_record(id, sale_name,user_id,user_account,param,best_meal,recommend_meals,account,create_time)
+		values(
+			#{id},
+			#{sale_name},
+			#{user_id},
+			#{login_name},
+			#{param},
+			#{best_meal},
+			#{recommend_meals},
+			#{account},
+			now()
+		)
+	</insert>
+	
+	<update id="updateRecordStatus" parameterType="java.lang.String">
+		update dim_compared_record set status = 1 where id = #{id}
+	</update> 
+	
+	<select id="selectById" parameterType="java.lang.String" resultType="java.util.Map">
+		select <include refid="Base_Column_List"/>
+		from dim_compared_record
+		where id = #{id}
+	</select>
+	
+</mapper>

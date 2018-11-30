@@ -11,7 +11,7 @@
 
     <artifactId>winsun-admin</artifactId>
     <name>winsun-admin</name>
-    <description>winsun 的spring boot版本</description>
+    <description>winsun 的spring cloud版本</description>
 
     <packaging>jar</packaging>
 
@@ -35,6 +35,10 @@
             <groupId>com.winsun</groupId>
             <artifactId>winsun-core</artifactId>
         </dependency>
+        <dependency>
+    		<groupId>org.springframework.cloud</groupId>
+    		<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
 
         <!--spring boot依赖-->
         <dependency>

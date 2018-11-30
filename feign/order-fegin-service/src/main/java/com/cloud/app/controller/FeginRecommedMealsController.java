@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.alibaba.fastjson.util.IOUtils;
-import com.cloud.app.fallback.WinsunDownFeginClient;
 import com.cloud.app.model.DimActDisc;
+import com.cloud.app.service.WinsunDownFeginClient;
 import com.cloud.app.service.WinsunRecommedMealsFeginClient;
 import com.cloud.app.service.WinsunUploadFeginClient;
 

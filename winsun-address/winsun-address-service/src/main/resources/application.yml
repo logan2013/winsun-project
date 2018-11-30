@@ -1,0 +1,45 @@
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8886/eureka/
+server:
+  port: 8090
+  servlet:
+    context-path: /addr
+spring:
+  data:
+    elasticsearch:
+      cluster-name: winsun-es #默认即为 elasticsearch
+      cluster-nodes: 132.97.54.52:58334 #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://47.106.133.4:3306/winsun_admin?&useSSL=false
+    url: jdbc:mysql://132.97.54.11:58333/address?&useSSL=false
+#    username: ciopuser
+#    password: Ciop123!@#
+    username: address
+    password: address@181126
+  devtools:
+    restart:
+      enabled: false
+      additional-paths: src/main/java
+      exclude: static/**,WEB-INF/view/**
+  application:
+    name: winsun-address-service
+  jpa:
+    database: MYSQL
+    show-sql: true
+feign:
+   hystrix:
+     enabled: false
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          timeoutInMilliseconds: 100000
+ribbon:
+  ReadTimeout: 100000
+  ConnectTimeout: 50000

@@ -1,0 +1,112 @@
+package com.winsun.item.modular.system.controller;
+
+import com.google.code.kaptcha.Constants;
+import com.winsun.item.core.base.controller.BaseController;
+import com.winsun.item.core.base.tips.ErrorTip;
+import com.winsun.item.core.common.exception.InvalidKaptchaException;
+import com.winsun.item.core.log.LogManager;
+import com.winsun.item.core.log.factory.LogTaskFactory;
+import com.winsun.item.core.node.MenuNode;
+import com.winsun.item.core.shiro.ShiroKit;
+import com.winsun.item.core.shiro.ShiroUser;
+import com.winsun.item.core.util.ApiMenuFilter;
+import com.winsun.item.core.util.JwtTokenUtil;
+import com.winsun.item.core.util.KaptchaUtil;
+import com.winsun.item.core.util.ToolUtil;
+import com.winsun.item.modular.system.model.User;
+import com.winsun.item.modular.system.service.IMenuService;
+import com.winsun.item.modular.system.service.IUserService;
+
+import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.crypto.hash.Md5Hash;
+import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.ByteSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.List;
+
+import static com.winsun.item.core.support.HttpKit.getIp;
+
+/**
+ * 登录控制器
+ *
+ * @author fengshuonan
+ * @Date 2017年1月10日 下午8:25:24
+ */
+@RestController
+public class LoginController extends BaseController {
+
+    @Autowired
+    private IMenuService menuService;
+
+    @Autowired
+    private IUserService userService;
+
+    /**
+     * 点击登录执行的动作
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Object loginVali() {
+
+        String username = super.getPara("username").trim();
+        String password = super.getPara("password").trim();
+        
+        //获取数据库中的账号密码，准备比对
+        User user = userService.getByAccount(username);
+        if (null == user) {
+        	return new ErrorTip(500, "账号密码错误！");
+        }
+
+        //校验用户账号密码
+        boolean passwordTrueFlag = false;
+        if (user.getPassword().equals(ShiroKit.md5(password, user.getSalt()))) {
+        	passwordTrueFlag = true;
+        }
+        
+        if (passwordTrueFlag) {
+        	 //封装请求账号密码为shiro可验证的token
+        	UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, password.toCharArray());
+        	Subject currentUser = ShiroKit.getSubject();
+            currentUser.login(usernamePasswordToken);
+            Serializable sessionId = ShiroKit.getSession().getId();
+
+            ShiroUser shiroUser = ShiroKit.getUser();
+            //super.getSession().setAttribute("shiroUser", shiroUser);
+            //super.getSession().setAttribute("username", shiroUser.getAccount());
+
+            LogManager.me().executeLog(LogTaskFactory.loginLog(shiroUser.getId(), getIp()));
+            ShiroKit.getSession().setAttribute("sessionFlag", true);
+            
+            HashMap<String, Object> result = new HashMap<>();
+            result.put("sessionId", sessionId.toString());
+            result.put("currentUser", shiroUser.getName());
+            result.put("code", 200);
+            result.put("message", "登陆成功！");
+            return result; 
+            
+        } else {
+            return new ErrorTip(500, "账号密码错误！");
+        }
+        
+    }
+
+    /**
+     * 退出登录
+     */
+    @RequestMapping(value = "/logout")
+    public String logout() {
+    	System.err.println(ShiroKit.getUser().getId());
+        LogManager.me().executeLog(LogTaskFactory.exitLog(ShiroKit.getUser().getId(), getIp()));
+        ShiroKit.getSubject().logout();
+        return "{\"code\":200}";
+    }
+}

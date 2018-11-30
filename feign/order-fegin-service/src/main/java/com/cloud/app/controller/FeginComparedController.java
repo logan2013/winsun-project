@@ -29,8 +29,8 @@ public class FeginComparedController {
 	}
 	
 	@RequestMapping(value = "/compared/agree")
-	public Object agreeResult(@RequestParam("id")String id) {
-		return client.agreeResult(id);
+	public Object agreeResult(@RequestParam("id")String id,@RequestParam("speed")String speed) {
+		return client.agreeResult(id,speed);
 	}
 	
 	@RequestMapping(value = "/compared/record/list")

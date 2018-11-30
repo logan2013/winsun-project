@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.winsun.item.core.base.controller.BaseController;
 import com.winsun.item.core.common.constant.factory.PageFactory;
+import com.winsun.item.core.shiro.ShiroKit;
+import com.winsun.item.core.shiro.ShiroUser;
 import com.winsun.item.core.util.ResponseEntity;
 import com.winsun.item.modular.compare.service.IComparedRecordService;
 import com.winsun.item.modular.compare.service.IComparedService;
@@ -58,10 +60,10 @@ public class ComparedController extends BaseController {
 	}
 	
 	@RequestMapping("agree")
-	public Object agreeResult(String id){
+	public Object agreeResult(String id, String speed){
 		//比算日志记录
-		System.err.println(id);
-		int r = comparedRecordService.updateRecordStatus(id);
+//		System.err.println(id);
+		int r = comparedRecordService.updateRecordStatus(id, speed);
 		if(r>0){
 			return ResponseEntity
 					.newJSON("code", 200, "message", "");			
@@ -73,8 +75,9 @@ public class ComparedController extends BaseController {
 	
 	@RequestMapping("record/list")
 	public Object recordList(@RequestParam Map<String,Object> map){
+		ShiroUser user = ShiroKit.getUser();
+		map.put("userId", user.getId());
 		Page<Map<String,Object>> page = new PageFactory<Map<String,Object>>().defaultPage();
-		System.out.println(page);
 		List<Map<String,Object>> list = comparedRecordService.selectList(page,map);
 		page.setRecords(list);
 		return ResponseEntity
@@ -84,7 +87,6 @@ public class ComparedController extends BaseController {
 	@RequestMapping(value = "record/pc/list")//, method = RequestMethod.POST
 	public Object recordList2(@RequestParam Map<String,Object> map){
 		Page<Map<String,Object>> page = new PageFactory<Map<String,Object>>().defaultPage();
-		System.out.println(page);
 		List<Map<String,Object>> list = comparedRecordService.selectPcList(page,map);
 		page.setRecords(list);
 		return super.packForBT(page);

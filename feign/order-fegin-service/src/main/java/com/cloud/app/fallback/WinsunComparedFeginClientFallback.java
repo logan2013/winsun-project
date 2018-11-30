@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cloud.app.service.WinsunComparedFeginClient;
@@ -28,7 +29,7 @@ public class WinsunComparedFeginClientFallback implements WinsunComparedFeginCli
 	}
 
 	@Override
-	public Object agreeResult(String id) {
+	public Object agreeResult(String id,String speed) {
 		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("500", "服务超时");
 		JSONObject json = new JSONObject(map);

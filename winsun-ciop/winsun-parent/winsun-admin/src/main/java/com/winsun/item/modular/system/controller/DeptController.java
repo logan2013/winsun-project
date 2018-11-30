@@ -47,7 +47,7 @@ public class DeptController extends BaseController {
     @GetMapping(value = "/tree")
     public List<ZTreeNode> tree() {
         List<ZTreeNode> tree = this.deptService.tree();
-        //tree.add(ZTreeNode.createParent());
+        tree.add(ZTreeNode.createParent());
         return tree;
     }
 
