@@ -31,13 +31,18 @@ public class AddressFeignClientFallback implements AddressFeignClient{
 	}
 	
 	@Override
-	public Object match(String address, Integer page, Integer size) {
-		return queryAddress(address,page,size);
+	public Object match(String address, Integer page, Integer limit) {
+		return queryAddress(address,page,limit);
 	}
 
 	@Override
-	public Object query(String address, Integer page, Integer size) {
-		return queryAddress(address,page,size);
+	public Object query(String address, Integer page, Integer limit) {
+		return queryAddress(address,page,limit);
+	}
+
+	@Override
+	public Object matchPart(String address, Integer page, Integer limit) {
+		return queryAddress(address,page,limit);
 	}
 
 }

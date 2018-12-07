@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="com.winsun.item.modular.manage.dao.ObstacleUserDeclarationListMapper">
+	<select id="maxDate" resultType="java.lang.String">
+		select max(sum_date) from report_jyks_sq_smgzd_result
+	</select>
+	
+	<select id="selectDataList" resultType="java.util.Map" parameterType="java.util.Map">
+		
+		<if test="type == 0"> 
+		select * from report_jyks_sq_smgzd_result t
+			WHERE 1=1
+			<if test="substName != null and substName != ''"> 
+				and subst_name = #{substName}
+			</if>
+			<if test="branchName != null and branchName != ''">
+		        and instr(branch_name,#{branchName}) >0
+		    </if>
+			<if test="sum_date != null and sum_date != ''">
+				and sum_date = #{sum_date}
+			</if>
+		</if>
+		<if test="type == 1"> 
+		<!-- 当月依案办理  -->
+		select * from report_jyks_sq_smgzd_result t
+			 where is_dk = '否'
+			   and is_yabl = '是'
+			   and is_tcvalts = '上升'
+			   <if test="sum_date != null and sum_date != ''">
+			       and sum_date = #{sum_date}
+			   </if>
+			   and (acc_nbr, create_date) in
+			       (select acc_nbr, max(create_date)
+			          from report_jyks_sq_smgzd_result
+			         where is_dk = '否'
+			           and is_yabl = '是'
+			           and is_tcvalts = '上升'
+			           <if test="sum_date != null and sum_date != ''">
+					       and sum_date = #{sum_date}
+					   </if>
+			         group by acc_nbr)
+	           <if test="substName != null and substName != ''"> 
+					and subst_name = #{substName}
+			   </if>
+			   <if test="branchName != null and branchName != ''">
+			        and instr(branch_name,#{branchName}) >0 
+			   </if>
+		</if>
+		<if test="type == 2"> 
+		<!-- 依案办理数  -->
+		select *
+           	from report_jyks_sq_smgzd_result t
+            where is_dk = '否'
+            <if test="sum_date != null and sum_date != ''">
+			   and to_date(t.create_date, 'yyyy/MM/dd') >=
+			       add_months(to_date(#{sum_date}, 'yyyymmdd'), -1)
+		    </if>
+            and is_yabl='是' 
+            and is_tcvalts='上升'
+            <if test="sum_date != null and sum_date != ''">
+		        and sum_date = #{sum_date}
+		    </if>
+			<if test="substName != null and substName != ''"> 
+				and subst_name = #{substName}
+		    </if>
+		    <if test="branchName != null and branchName != ''">
+		        and instr(branch_name,#{branchName}) >0 
+		    </if>
+		</if>
+		<if test="type == 3">
+		<!-- 单进融量 --> 
+		select * from report_jyks_sq_smgzd_result t
+			 where is_dk = '是'
+			   <if test="sum_date != null and sum_date != ''">
+			   and to_date(t.create_date, 'yyyy/MM/dd') >=
+			       add_months(to_date(#{sum_date}, 'yyyymmdd'), -1)
+			   </if>
+			   and ((IS_489_WSQ='是' AND IS_LZ='是') or yd_channel_subtype_rb = '社区店')
+			   and (is_lz = '是' or is_xz = '是')
+			   and is_jr = '是'
+			<if test="sum_date != null and sum_date != ''">
+		        and sum_date = #{sum_date}
+		    </if>
+			<if test="substName != null and substName != ''"> 
+				and SUBST_NAME = #{substName}
+		    </if>
+		    <if test="branchName != null and branchName != ''">
+		        and instr(branch_name,#{branchName}) >0 
+		    </if>
+		</if>
+		<if test="type == 4">
+		<!-- 当月单进融量  -->
+		select * from (
+				select a.*,row_number() over (partition by acc_nbr,yd_create_date order by create_date desc) rn
+  				from report_jyks_sq_smgzd_result a
+ 				where is_dk = '是'
+   				<if test="sum_date != null and sum_date != ''">
+			        and sum_date = #{sum_date}
+			    </if>
+   				and ((IS_489_WSQ='是' AND IS_LZ='是') or yd_channel_subtype_rb = '社区店')
+   				and (is_lz = '是' or is_xz = '是')
+   				and is_jr = '是'
+				<if test="substName != null and substName != ''"> 
+					and subst_name = #{substName}
+			    </if>
+			    <if test="branchName != null and branchName != ''">
+			        and instr(branch_name,#{branchName}) >0 
+			    </if>
+   				) where rn=1
+		    
+		</if>
+		
+	</select>
+	
+	<!-- <select id="selectDataList" resultType="java.util.Map"
+		parameterType="java.util.Map">
+		SELECT
+		ACC_NBR AS "VALUE1",
+		CUST_TYPE AS "VALUE2",
+		CUST_NAME AS "VALUE3",
+		INSTALL_ADDR AS "VALUE4",
+		BEVY_CUST_NAME AS "VALUE5",
+		BEVY_CUST_CODE AS "VALUE6",
+		CF_NUM AS "VALUE7",
+		CREATE_DATE AS "VALUE8",
+		IG.SUBST_NAME AS "VALUE9",
+		IG.BRANCH_NAME AS "VALUE10"
+		FROM SSZB_SQ_SMGZD_LIST t
+		LEFT JOIN inco_grid ig ON ig.grid_name = t.bevy_cust_name
+		WHERE 1=1
+		<if test="substName != null and sustName != ''"> 
+			and #{substName} = substr(ig.subst_name,0,2) 
+		</if>
+		<if test="sum_date != null and sum_date != ''">
+			and #{sum_date} = to_char(to_date(t.create_date,'yyyy/mm/dd'),'yyyyMMdd') 
+		</if>
+	</select> -->
+
+
+</mapper>

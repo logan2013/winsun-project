@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.winsun.item.modular.manage.dao.FreeTrialBroadbandListMapper">
+
+	<select id="selectDataList" resultType="java.util.Map"
+		parameterType="java.util.Map">
+		SELECT
+		subst_id as "value1",
+		item_type as "value2",
+		month_id as "value3",
+		subst_name as "value4",
+		branch_name as "value5",
+		bevy_cust_code as "value6",
+		bevy_cust_name as "value7",
+		act_date as "value8",
+		subs_stat_date as "value9",
+		prod_offer_code as "value10",
+		acc_nbr as "value11",
+		salestaff_id as "value12",
+		salestaff_name as "value13",
+		xz_salestaff_id as "value14",
+		xz_salestaff_name as "value15",
+		address_addr as "value16",
+		contacter as "value17",
+		conphone as "value18",
+		cust_name as "value19",
+		speed_value as "value20",
+		state_desc as "value21"
+		FROM report_jyks_mfty_free_list
+		where 1=1
+		<if test="subst_name != null and subst_name != ''">
+			and subst_name = #{subst_name}
+		</if>
+		<if test="branch_name != null and branch_name != ''">
+			and instr(branch_name,#{branch_name}) >0 
+		</if>
+		<if test="sum_date != null and sum_date != ''">
+			and month_id = #{sum_date}
+		</if> 
+		<if test="sum_date2 != null and sum_date2 != ''">
+			and REPLACE(subs_stat_date,'/','') &lt;= #{sum_date2}
+		</if>
+		<if test="sum_date3 != null and sum_date3 != ''">
+			and REPLACE(subs_stat_date,'/','') = #{sum_date3}
+		</if>
+	</select>
+	
+	<select id="maxDate" resultType="java.lang.String">
+		SELECT MAX(month_id)
+		FROM
+		report_jyks_mfty_free_list
+	</select>
+	
+	<select id="maxDate2" resultType="java.lang.String">
+		SELECT
+			REPLACE(MAX(
+				subs_stat_date
+			),'/','')
+		FROM
+			report_jyks_mfty_free_list
+	</select>
+	
+</mapper>

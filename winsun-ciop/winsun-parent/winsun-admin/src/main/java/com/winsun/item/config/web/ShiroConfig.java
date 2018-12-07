@@ -174,6 +174,10 @@ public class ShiroConfig {
         hashMap.put("/global/sessionError", "anon");
         hashMap.put("/kaptcha", "anon");*/
         hashMap.put("/login", "anon");
+        hashMap.put("/acclogin", "anon");
+        hashMap.put("/accSendSms", "anon");
+        hashMap.put("/version/update", "anon");
+        hashMap.put("/version/getVersion", "anon");
         hashMap.put("/**", "user");
         shiroFilter.setFilterChainDefinitionMap(hashMap);
         return shiroFilter;

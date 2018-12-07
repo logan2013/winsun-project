@@ -11,6 +11,7 @@
     <modules>
         <module>winsun-admin</module>
         <module>winsun-core</module>
+        <module>winsun-ciop-report</module>
     </modules>
 
     <parent>

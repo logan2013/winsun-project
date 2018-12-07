@@ -14,13 +14,18 @@ public interface AddressFeignClient {
 	
 	@GetMapping("/addr/address/match")
 	public Object match(@RequestParam("address")String address,
-			@RequestParam("page")Integer page,
-			@RequestParam("size")Integer size);
+			@RequestParam(name = "page",required = false) Integer page,
+			@RequestParam(name = "limit",required = false) Integer limit);
 	
 	@GetMapping("/addr/address/fuzzy")
 	public Object query(@RequestParam("address")String address,
-			@RequestParam("page")Integer page,
-			@RequestParam("size")Integer size);
+			@RequestParam(name = "page",required = false) Integer page,
+			@RequestParam(name = "limit",required = false) Integer limit);
+	
+	@GetMapping("/addr/address/matchPart")
+	public Object matchPart(@RequestParam("address")String address,
+			@RequestParam(name = "page",required = false) Integer page,
+			@RequestParam(name = "limit",required = false) Integer limit);
 
 }
 

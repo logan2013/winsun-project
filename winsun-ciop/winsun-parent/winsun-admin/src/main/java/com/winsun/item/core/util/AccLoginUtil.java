@@ -1,0 +1,196 @@
+package com.winsun.item.core.util;
+
+import static com.winsun.item.core.support.HttpKit.getIp;
+
+import java.io.Serializable;
+import java.net.InetAddress;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.shiro.subject.Subject;
+
+import com.winsun.item.core.base.tips.ErrorTip;
+import com.winsun.item.core.common.constant.factory.ConstantFactory;
+import com.winsun.item.core.log.LogManager;
+import com.winsun.item.core.log.factory.LogTaskFactory;
+import com.winsun.item.core.shiro.CustomToken;
+import com.winsun.item.core.shiro.ShiroKit;
+import com.winsun.item.core.shiro.ShiroUser;
+import com.winsun.item.core.support.HttpKit;
+import com.winsun.item.modular.system.model.User;
+import com.winsun.item.modular.system.service.impl.AccServiceImpl;
+
+public class AccLoginUtil {
+	
+	public static Boolean whetherAccLogin(User user) {
+		Boolean flag = false;
+        
+        Integer[] roleArray = Convert.toIntArray(user.getRoleid());
+        for (int roleId : roleArray) {
+            List<Long> menuIds = ConstantFactory.me().getMenuIdsByRoleId(roleId);
+            if(menuIds != null && menuIds.size() != 0) {
+            	long menuid = ConstantFactory.me().getMenusIdByCode("not:acc:verification");
+            	if(menuIds.contains(menuid)) {
+            		flag = true;
+            		break;
+            	}
+            }
+        }
+        
+        return flag;
+	}
+	
+	public static Object accLogin(String subStaffId,String staffPwd){
+		
+		try {
+			String trimPwd = StringEscapeUtils.unescapeHtml4(staffPwd.replaceAll(" ", ""));
+	        
+	        String pwd = URLEncoder.encode(trimPwd,"utf-8");
+	        
+	        String ipAddr = InetAddress.getLocalHost().getHostAddress().toString();
+	        String netIp = AccServiceImpl.getIpAddrNotF5(HttpKit.getRequest());
+	        
+	        Map<String, Map<String, Object>> accMap = AccServiceImpl.accPwdValidate(subStaffId, pwd, ipAddr, netIp);
+	        
+	        Map<String, Object> resultMap = accMap.get("resultMap");
+	        Integer code = (Integer) resultMap.get("code");
+	        
+	        if(code != 0) {
+	        	return new ErrorTip(500, resultMap.get("msg").toString());
+	        }
+	        
+	        CustomToken accPasswordToken = new CustomToken(subStaffId);
+	    	Subject currentUser = ShiroKit.getSubject();
+	        currentUser.login(accPasswordToken);
+	        Serializable sessionId = ShiroKit.getSession().getId();
+
+	        ShiroUser shiroUser = ShiroKit.getUser();
+	        //super.getSession().setAttribute("shiroUser", shiroUser);
+	        //super.getSession().setAttribute("username", shiroUser.getAccount());
+
+	        LogManager.me().executeLog(LogTaskFactory.loginLog(shiroUser.getId(), getIp()));
+	        ShiroKit.getSession().setAttribute("sessionFlag", true);
+	        
+	        HashMap<String, Object> result = new HashMap<>();
+	        result.put("sessionId", sessionId.toString());
+	        result.put("currentUser", shiroUser.getName());
+	        result.put("code", 200);
+	        if(resultMap.get("beoverdue") != null) {
+	        	result.put("message", "即将过期！");
+	        }else {
+	        	result.put("message", "登陆成功！");
+	        }
+	        	
+	        
+	        return result; 
+	        
+		} catch (Exception e) {
+			return new ErrorTip(500, e.getMessage());
+		}
+		
+		
+	}
+	
+	public static Object accSendSms(String subStaffId){
+		
+		try {
+	        
+	        String ipAddr = InetAddress.getLocalHost().getHostAddress().toString();
+	        String netIp = AccServiceImpl.getIpAddrNotF5(HttpKit.getRequest());
+	        
+	        Map<String, Map<String, Object>> accMap = AccServiceImpl.accSendSms(subStaffId, ipAddr, netIp);
+	        if(accMap == null) {
+	        	return new ErrorTip(500, "获取短信验证码失败！");
+	        }
+	        return accMap.get("resultMap");
+	        
+	 
+		} catch (Exception e) {
+			return new ErrorTip(500, e.getMessage());
+		}
+		
+		
+	}
+	
+	public static Object accSmsValidate(String uuid,String subStaffId,String smsCode) {
+		
+		try {
+        
+        String ipAddr = InetAddress.getLocalHost().getHostAddress().toString();
+        String netIp = AccServiceImpl.getIpAddrNotF5(HttpKit.getRequest());
+        
+        Map<String, Map<String, Object>> accMap = AccServiceImpl.accSmsValidate(uuid,subStaffId, ipAddr, netIp,smsCode);
+        
+        Map<String, Object> resultMap = accMap.get("resultMap");
+        Integer code = (Integer) resultMap.get("code");
+        
+        if(code != 0) {
+        	return new ErrorTip(500, resultMap.get("msg").toString());
+        }
+        
+        CustomToken accPasswordToken = new CustomToken(subStaffId);
+    	Subject currentUser = ShiroKit.getSubject();
+        currentUser.login(accPasswordToken);
+        Serializable sessionId = ShiroKit.getSession().getId();
+
+        ShiroUser shiroUser = ShiroKit.getUser();
+        //super.getSession().setAttribute("shiroUser", shiroUser);
+        //super.getSession().setAttribute("username", shiroUser.getAccount());
+
+        LogManager.me().executeLog(LogTaskFactory.loginLog(shiroUser.getId(), getIp()));
+        ShiroKit.getSession().setAttribute("sessionFlag", true);
+        
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("sessionId", sessionId.toString());
+        result.put("currentUser", shiroUser.getName());
+        result.put("code", 200);
+        if(resultMap.get("beoverdue") != null) {
+        	result.put("message", "即将过期！");
+        }else {
+        	result.put("message", "登陆成功！");
+        }
+        
+        return result;
+        
+		}catch (Exception e) {
+			return new ErrorTip(500, e.getMessage());
+		}
+	}
+	
+	
+	public static Object normalLogin(String subStaffId,String staffPwd,User user) {
+		try {
+			
+	        if (!user.getPassword().equals(ShiroKit.md5(staffPwd, user.getSalt()))) {
+	        	return new ErrorTip(500, "账号密码错误！");
+	        }
+			
+			CustomToken adminPasswordToken = new CustomToken(subStaffId, staffPwd);
+	    	Subject currentUser = ShiroKit.getSubject();
+	        currentUser.login(adminPasswordToken);
+	        Serializable sessionId = ShiroKit.getSession().getId();
+
+	        ShiroUser shiroUser = ShiroKit.getUser();
+	        //super.getSession().setAttribute("shiroUser", shiroUser);
+	        //super.getSession().setAttribute("username", shiroUser.getAccount());
+
+	        LogManager.me().executeLog(LogTaskFactory.loginLog(shiroUser.getId(), getIp()));
+	        ShiroKit.getSession().setAttribute("sessionFlag", true);
+	        
+	        HashMap<String, Object> result = new HashMap<>();
+	        result.put("sessionId", sessionId.toString());
+	        result.put("currentUser", shiroUser.getName());
+	        result.put("code", 200);
+	        result.put("message", "登陆成功！");
+	        return result; 
+	        
+		} catch (Exception e) {
+			return new ErrorTip(500, e.getMessage());
+		}
+		
+	}
+
+}

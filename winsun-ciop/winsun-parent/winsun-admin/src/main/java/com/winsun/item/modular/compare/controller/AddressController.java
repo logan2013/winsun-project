@@ -4,17 +4,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.winsun.item.core.base.controller.BaseController;
 import com.winsun.item.core.common.constant.factory.PageFactory;
 import com.winsun.item.core.feign.AddressFeignClient;
+import com.winsun.item.core.support.HttpKit;
 import com.winsun.item.core.util.ResponseEntity;
+import com.winsun.item.core.util.ToolUtil;
 import com.winsun.item.modular.compare.service.IAddressService;
 
 /**
@@ -49,12 +55,57 @@ public class AddressController extends BaseController {
 	
 	
 	@RequestMapping("/essearch")
-	public Object esSearchAddress(@RequestParam("address")String address,
-			@RequestParam("limit")Integer limit,
-			@RequestParam("page")Integer page) {
-		Object match = addressFeignClient.match(address, page, limit);
-		return ResponseEntity
-				.newJSON("code", 200, "data", match);
+	public Object esSearchAddress(@RequestParam("address")String address) {
+		HttpServletRequest request = HttpKit.getRequest();
+        String limitNum = request.getParameter("limit");
+        String pageNum = request.getParameter("page");
+        int limit = 10;     //每页多少条数据
+        int pageN = 1;   //第几页
+        
+        if (ToolUtil.isNotEmpty(limitNum)) {
+        	limit = Integer.valueOf(limitNum); 
+        }
+        if (ToolUtil.isNotEmpty(pageNum)) {
+        	pageN = Integer.valueOf(pageNum); 
+        }
+		Object match = addressFeignClient.match(address, pageN, limit);
+		JSONObject json = JSONObject.parseObject(JSON.toJSONString(match));
+		Integer code = json.getInteger("resultcode");
+		if(code != 0) {
+			return ResponseEntity
+					.newJSON("code", 500, "data", json.get("results"));
+		}else {
+			return ResponseEntity
+					.newJSON("code", 200, "data", json.get("results"));
+		}
+		
+	}
+	
+	@RequestMapping("/essearchPart")
+	public Object esSearchPartAddress(@RequestParam("address")String address) {
+		HttpServletRequest request = HttpKit.getRequest();
+        String limitNum = request.getParameter("limit");
+        String pageNum = request.getParameter("page");
+        int limit = 10;     //每页多少条数据
+        int pageN = 1;   //第几页
+        
+        if (ToolUtil.isNotEmpty(limitNum)) {
+        	limit = Integer.valueOf(limitNum); 
+        }
+        if (ToolUtil.isNotEmpty(pageNum)) {
+        	pageN = Integer.valueOf(pageNum); 
+        }
+		Object match = addressFeignClient.matchPart(address, pageN, limit);
+		JSONObject json = JSONObject.parseObject(JSON.toJSONString(match));
+		Integer code = json.getInteger("resultcode");
+		if(code != 0) {
+			return ResponseEntity
+					.newJSON("code", 500, "data", json.get("results"));
+		}else {
+			return ResponseEntity
+					.newJSON("code", 200, "data", json.get("results"));
+		}
+		
 	}
 	
 	

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.winsun.item.modular.manage.dao.InstallationMaintenanceInformationMapper">
+
+    <select id="maxDate" resultType="java.lang.String">
+        select max(sum_date) from report_jyks_tb_zwxx
+    </select>
+
+    <select id="maxPQDate" resultType="java.lang.String">
+        select max(sum_date) from report_jyks_tb_pqzwxx
+    </select>
+
+    <select id="selectDataList" resultType="java.util.Map" parameterType="java.util.Map">
+        SELECT
+        	t.subst_name AS "value1",
+        	t.value1 AS "value2",
+        	t.value2 AS "value3",
+        	t.value3 AS "value4",
+        	t.value6 AS "value5",
+        	t.value7 AS "value6",
+        	t.value8 AS "value7",
+        	t.value9 AS "value8",
+        	round(t.VALUE4 / 1000, 3) AS "value9",
+        	CONCAT(round(t.VALUE5 / 10, 3), '%') AS "value10"
+        FROM
+        	report_jyks_tb_zwxx t
+        LEFT JOIN report_order_subst s ON s.subst_name = t.subst_name
+        WHERE
+        	t.sum_date = #{sum_date}
+        ORDER BY
+        	s.order_id
+    </select>
+
+    <select id="selectPqDataList" resultType="java.util.Map" parameterType="java.util.Map">
+        SELECT
+        subst_name AS "value1",
+        branch_name AS "value2",
+        comm_name AS "value3",
+        value1 AS "value4",
+        value2 AS "value5",
+        value3 AS "value6",
+        value4 AS "value7",
+        value5 AS "value8",
+        value6 AS "value9",
+        value7 AS "value10",
+        round(VALUE8/1000, 3) AS "value11",
+        CONCAT(round(VALUE5/9, 3), '%') AS "value12"
+        FROM report_jyks_tb_pqzwxx
+        WHERE sum_date = #{sum_date}
+        AND SUBST_NAME != '全市'
+        <if test="subst_name != null and subst_name != ''">
+            AND subst_name = #{subst_name}
+        </if>
+        <if test="branch_name != null and branch_name != ''">
+            AND branch_name like #{branch_name}||'%'
+        </if>
+    </select>
+
+
+</mapper>

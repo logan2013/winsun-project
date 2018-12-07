@@ -1,0 +1,327 @@
+package com.winsun.item.modular.system.service.impl;
+
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.InetAddress;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.net.UnknownHostException;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+public class AccServiceImpl{
+
+	
+	public static String pwdValidateUrl = "http://132.121.91.48:9111/accsv/intfmgr/verify/queryUnifyStaffInfo.action";
+	public static String sendSmsUrl = "http://132.121.91.48:9111/accsv/intfmgr/verify/querySmsRandomCode.action";
+	public static String smsValidateUrl = "http://132.121.91.48:9111/accsv/intfmgr/verify/verifySmsRandomCode.action";
+	
+	
+	public static String staffId = "";
+	public static String sysCode = "GZSTQDZHYYPT"; // 调用系统编码
+	public static String sysPwd = "16A34C2BAA528535DE84969D4D7E89534CE967B5"; // 调用系统密码
+	public static String qryType = "3"; // 1、查询二次认证策略；2、查询员工图片地址；3、查询二次认证策略与员工图片地址
+	
+	public static String moduleType = "VERIFY_PWD"; // 1、VERIFY_PWD表示需要校验工号密码；2、QUERY_POLICY表示只查询二次认证策略，不需要校验密码
+	public static String reqCode = "EIAC20180813093012"; // 订单号
+	public static String Version = "3.0"; // 当前版本号3.0
+	public static String actCode = "LOGIN"; // 调用登录
+	public static String adSyn = "1"; // 启用AD认证标识
+	
+   /**
+    * ACC密码认证
+    * @param subStaffId 前台获账号
+    * @param staffPwd 前台获取密码
+    * @param ipAddr 本地IP
+    * @param netIp 网络IP
+    * @return
+    */
+   public static Map<String, Map<String,Object>> accPwdValidate(String subStaffId, String staffPwd, String ipAddr, String netIp) {
+	   
+	   Map<String,Map<String,Object>> result = new LinkedHashMap<>();
+	   Map<String,Object> resultMap = new LinkedHashMap<>();
+	   
+	   //接口参数
+	   Map<String,Object> params = new LinkedHashMap<>();
+	   params.put("subStaffId", subStaffId);
+	   params.put("staffPwd", staffPwd);
+	   params.put("ipAddr", ipAddr);
+	   params.put("netIp", netIp);
+	   params.put("qryType", qryType);
+	   params.put("staffId", staffId);
+	   params.put("sysCode", sysCode);
+	   params.put("sysPwd", sysPwd);
+	   params.put("moduleType", moduleType);
+	   params.put("reqCode", reqCode);
+	   params.put("Version", Version);
+	   params.put("actCode", actCode);
+	   params.put("adSyn", adSyn);
+	   
+	   try {
+		String httpResponse = doPost(pwdValidateUrl, params);
+		
+		//截取<Response>00</Response>的值
+		Pattern p = Pattern.compile("<Response>(.*)</Response>");
+		Matcher m = p.matcher(httpResponse);
+		String POLICY_CODE = ""; // 二次认证策略值
+		String PWD_VER_RET = ""; // 密码验证状态
+		String rspDesc = null; // 响应结果描述
+		
+		//获取服务器返回的描述并且进行解码，以便在前台进行提示使用
+		Pattern pDesc = Pattern.compile("<RspDesc>(.*)</RspDesc>");
+		Matcher mDesc = pDesc.matcher(httpResponse);
+		
+		while (mDesc.find()) {
+			rspDesc = mDesc.group(1);
+			System.out.println(rspDesc);
+		}
+		
+		while (m.find()) {
+			// 获取返回的密码状态为，主要用于判断密码验证状态，具体状态位在接口标准中有详尽描述
+			Pattern pPwd = Pattern.compile("<PWD_VER_RET>(.*)</PWD_VER_RET>");
+			Matcher mPwd = pPwd.matcher(httpResponse);
+			
+			while (mPwd.find()) {
+				System.out.println("<PWD_VER_RET>的值为： " + mPwd.group(1));
+				PWD_VER_RET = mPwd.group(1);
+			}
+			if ("00".equals(m.group(1))) {
+				//获取二次认证策略值 ，为"VERIFY_PWD"时表示密码校验，"VERIFY_SMS"时表示需要短信校验
+				Pattern pPolicy = Pattern.compile("<POLICY_CODE>(.*)</POLICY_CODE>");
+				Matcher mPolicy = pPolicy.matcher(httpResponse);
+				while (mPolicy.find()) {
+					System.out.println("<POLICY_CODE>的值为： " + mPolicy.group(1)); // 打印出二次认证策略的值
+					POLICY_CODE = mPolicy.group(1);
+				}
+
+				// 当PWD_VER_RET的值为0或者12的时候即表示密码验证通过， 12表示密码即将过期。0表示验证正常
+				if (PWD_VER_RET != null && ("0".equals(PWD_VER_RET) || "12".equals(PWD_VER_RET))) { // 认证成功,12表示密码即将过期
+					resultMap.put("code", 0);
+					resultMap.put("msg", rspDesc);
+					
+				} else {
+					resultMap.put("code", 1);
+					resultMap.put("msg", rspDesc);
+					
+				}
+			} else { 
+				// response不为00的情况表示验证不成功，此时在后台抛出异常，并在前台提示
+				// 获取服务器返回的错误描述，以便在前台进行提示使用
+				resultMap.put("code", 1);
+				resultMap.put("msg", rspDesc);
+			}
+		}
+		
+		// 二次认证策略为短信认证，则调用调用短信认证接口
+		if ("VERIFY_SMS".equals(POLICY_CODE)) {
+			// 展示短信输入界面，若密码即将过期则提醒用户密码即将过期
+			resultMap.put("smsValidate", 0);
+		} else {
+			// 若密码即将过期则提醒用户密码即将过期，并跳转登陆成功的界面
+			resultMap.put("smsValidate", 1);
+		}
+		
+		result.put("params", params);
+		result.put("resultMap", resultMap);
+		
+		return result;
+		
+	   } catch (IOException e) {
+			e.printStackTrace();
+			return null;
+	   }
+	   
+   }
+   
+   /**
+    * 获取短信验证码 
+    * @param params
+    * @return
+    */
+   public static Map<String,Map<String,Object>> accSendSms (Map<String,Object> params) {
+	   
+	   Map<String,Map<String,Object>> result = new LinkedHashMap<>();
+	   Map<String,Object> resultMap = new LinkedHashMap<>();
+	   
+	   try {
+		  //http方式调用获取短信验证码接口
+		   String httpResponse = doPost(sendSmsUrl, params);
+		   Pattern p = Pattern.compile("<Response>(.*)</Response>");
+		   Matcher m = p.matcher(httpResponse);
+		   String theUUID = "";
+		   while (m.find() && "00".equals(m.group(1))) {
+	         //获取短信验证码成功
+	         //截取<THE_UUID>
+			 Pattern p2 = Pattern.compile("<THE_UUID>(.*)</THE_UUID>");	//获取唯一编码、与短信验证码一一对应
+			 Matcher m2 = p2.matcher(httpResponse);
+			 while (m2.find()) {
+				theUUID = m2.group(1);
+			 }
+			 params.put("theUuid", theUUID);
+			 resultMap.put("code", 0);
+			 resultMap.put("msg", "短信验证码成功发送");
+			 
+			 result.put("params", params);
+		     result.put("resultMap", resultMap);
+		     return result;
+		   }
+		   
+		   return null;
+		   
+	   } catch (IOException e) {
+			// TODO 自动生成的 catch 块
+		   e.printStackTrace();
+		   return null;
+	   }   
+	   
+   }
+   
+   /**
+    * 短信验证 
+    * @param params
+    * @return
+    */
+   public static Map<String,Map<String,Object>> accSmsValidate(Map<String,Object> params) {
+	   
+	   Map<String,Map<String,Object>> result = new LinkedHashMap<>();
+	   Map<String,Object> resultMap = new LinkedHashMap<>();
+	   
+	   params.put("moduleType", "VERIFY_SMS");//认证方式为短信认证
+	   params.put("actCode", "LOGIN");//登录
+	   params.put("ServiceCode", "verifySmsRandomCode");//调用服务为短信认证
+	   
+	   try {
+		   //http方式调用取短信验证接口
+		   String httpResponse = doPost(smsValidateUrl, params);
+		   
+		   Pattern p = Pattern.compile("<RspCode>(.*)</RspCode>");
+		   Matcher m = p.matcher(httpResponse);
+		   int flag = 0;
+		   while (m.find() && "0".equals(m.group(1))) {
+		  	 flag = 1;
+		  	 resultMap.put("code", 0);
+			 resultMap.put("msg", "短信验证成功");
+		   }
+		   if (flag == 0) {
+			 resultMap.put("code", 1);
+			 resultMap.put("msg", "短信验证失败");
+		   }
+		   
+		   result.put("params", params);
+		   result.put("resultMap", resultMap);
+		   return result;
+		   
+	   } catch (IOException e) {
+			// TODO 自动生成的 catch 块
+		   e.printStackTrace();
+		   return null;
+	   }
+		
+   }
+   
+   
+   public static String doPost (String postUrl,  Map<String,Object> params) throws IOException {
+      URL url = new URL(postUrl);
+ 	 
+ 	  //开始访问
+ 	  StringBuilder postData = new StringBuilder();
+ 	  for (Map.Entry<String,Object> param : params.entrySet()) {
+ 	      if (postData.length() != 0) postData.append('&');
+ 	      postData.append(URLEncoder.encode(param.getKey(), "UTF-8"));
+ 	      postData.append('=');
+ 	      postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+ 	      System.out.println(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+ 	      
+ 	  }
+ 	  byte[] postDataBytes = postData.toString().getBytes("UTF-8");
+ 	 
+ 	  HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+ 	  conn.setRequestMethod("POST");
+ 	  conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+ 	  conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
+ 	  conn.setDoOutput(true);
+ 	  conn.getOutputStream().write(postDataBytes);
+ 	 
+ 	  String result = convertStreamToString(conn.getInputStream());
+ 	  
+ 	  return result;
+ }
+   
+   public static String getIpAddrNotF5(HttpServletRequest request) {
+		String ipAddr = null;
+		try {
+			ipAddr = request.getHeader("x-forwarded-for");
+		} catch (NullPointerException e) {
+			// e.printStackTrace();
+		}
+		if (ipAddr == null || ipAddr.length() == 0 || "unknown".equalsIgnoreCase(ipAddr)) {
+		}
+		try {
+			ipAddr = request.getHeader("Proxy-Client-IP");
+		} catch (NullPointerException e) {
+		}
+
+		if (ipAddr == null || ipAddr.length() == 0 || "unknown".equalsIgnoreCase(ipAddr)) {
+		}
+		try {
+			ipAddr = request.getHeader("WL-Proxy-Client-IP");
+		} catch (NullPointerException e) {
+		}
+
+		if (ipAddr == null || ipAddr.length() == 0 || "unknown".equalsIgnoreCase(ipAddr)) {
+		}
+		try {
+			ipAddr = request.getHeader("CLIENTIP");
+		} catch (NullPointerException e) {
+		}
+
+		if (ipAddr == null || ipAddr.length() == 0 || "unknown".equalsIgnoreCase(ipAddr)) {
+			try {
+				ipAddr = request.getRemoteAddr();
+			} catch (NullPointerException e) {
+			}
+			if ("127.0.0.1".equals(ipAddr)) {
+				InetAddress inet = null;
+				try {
+					inet = InetAddress.getLocalHost();
+				} catch (UnknownHostException e) {
+					e.printStackTrace();
+				}
+				ipAddr = inet.getHostAddress();
+			}
+		}
+
+		return ipAddr;
+	}
+ 
+	public static String convertStreamToString(InputStream is) {
+		StringBuilder sb1 = new StringBuilder();
+		byte[] bytes = new byte[4096];
+		int size = 0;
+		try {
+			while ((size = is.read(bytes)) > 0) {
+				String str = new String(bytes, 0, size, "GBK");
+				sb1.append(str);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				is.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return sb1.toString();
+	}
+}
